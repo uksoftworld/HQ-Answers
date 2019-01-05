@@ -1,4 +1,3 @@
-import config
 import discord
 import asyncio
 import networking
@@ -97,4 +96,4 @@ class MyClient(discord.Client):
 
 if __name__ == '__main__':
     client = MyClient()
-    client.run(config.DISCORD_TOKEN)
+    client.run(os.getenv('Token'))
