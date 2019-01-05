@@ -34,7 +34,7 @@ class MyClient(discord.Client):
         # Make sure we don't respond to ourself or messages outside the channel
         # or when there is no active game
         if message.author == self.user or \
-                message.channel.id != 531101582440267798 or \
+                message.channel.id != '531104149299920916' or \
                 not self.isGameLive:
             return
 
@@ -81,7 +81,7 @@ class MyClient(discord.Client):
             if broadcast:
                 self.isGameLive = True
                 socketUrl = broadcast.get('socketURL')
-                channel = self.get_channel('531101582440267798')
+                channel = self.get_channel('531104149299920916')
 
                 # Add the websocket handler to the event loop
                 # This web socket will get the questions and answers from HQ
